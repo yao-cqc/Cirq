@@ -554,7 +554,7 @@ def deprecated_submodule(
         # this is just to make mypy not complain about the type of new_module_spec being Optional
         return DeprecatedModuleFinder(finder, new_module_name, old_module_name, deadline)
 
-    sys.meta_path = [wrap(finder) for finder in sys.meta_path]
+    # sys.meta_path = [wrap(finder) for finder in sys.meta_path]
 
 
 def _setup_deprecated_submodule_attribute(
